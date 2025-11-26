@@ -16,6 +16,18 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+/* color variables */
+:root {
+  --bg-color: #212226;
+  --text-color: #f5f5f5;
+  --hover-text-color: rgb(216, 216, 216);
+  --text-muted: #b6b6b6;
+
+  --accent: #ff9a00;
+  --accent-hover: #e76a00;
+  --header-bg: #ffaf00;
+}
+
 /* ::selection { */
 /*   background: #ff9a00; */
 /*   color: #000000; */
@@ -24,10 +36,9 @@
 /* page bg */
 /* Enter Sobakin. */
 body {
-  background-color: #212226;
+  background-color: var(--bg-color);
 }
 
-/* all text */
 /* pastaya comments here, fuck you sobakintech for not including blockquote */
 p,
 h1,
@@ -36,12 +47,12 @@ h3,
 a,
 blockquote,
 button {
-  color: white;
+  color: var(--text-color);
   font-family: Inter;
 }
 
 a:hover {
-  color: rgb(216, 216, 216);
+  color: var(--hover-text-color);
 }
 
 #logo {
@@ -65,8 +76,8 @@ a:hover {
 
 #links>a {
   display: inline-block;
-  background-color: #ff9a00;
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-color);
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -79,7 +90,7 @@ a:hover {
 }
 
 #links>a:hover {
-  background-color: #e76a00;
+  background-color: var(--accent-hover);
   /* i know i said i won't follow trends but damn this would be cooler */
   transform: scale(1.05) skew(10deg);
   /* owo so big */
@@ -92,13 +103,13 @@ header {
 }
 
 #credits {
-  color: #b6b6b6;
+  color: var(--text-muted);
   font-size: smaller;
 }
 
 #nyabtn {
-  background-color: #ff9a00;
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-color);
   padding: 8px 15px;
   border: none;
   border-radius: 15px;
@@ -114,8 +125,8 @@ header {
 
 /* consider like uhhh mergin nyabtn and this together? */
 #resetbtn {
-  background-color: #ff9a00;
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-color);
   padding: 8px 15px;
   border: none;
   border-radius: 15px;
@@ -142,7 +153,7 @@ header {
   transition: transform 0.4 ease-in-out;
   font-size: 2.5rem;
   font-weight: bold;
-  background: #ffaf00;
+  background: var(--header-bg);
   padding: 0.5rem 1rem;
   animation: snapRotate 1s cubic-bezier(.74, -0.1, .49, 2.42) forwards;
   /* why so complicated?? */
